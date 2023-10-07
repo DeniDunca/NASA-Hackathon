@@ -1,4 +1,5 @@
 import drop from "../assets/drop.svg";
+import bubble from "../assets/bubble.svg";
 import {FaPlus} from "react-icons/fa6";
 import {Popover} from "react-tiny-popover";
 import {useState} from "react";
@@ -27,13 +28,13 @@ export default function Index({hasButton = false, buttonAction, className, text,
     ;
 
     return (
-        <div className={"w-full relative select-none" + className || ""}>
-            <img src={drop} className="h-full w-full"/>
-            {!!text && <div
-                className="text-xl text-white absolute w-[50%] top-1/2 right-1/2 translate-x-1/2 translate-y-[-50px] text-center select-none">
-                {text}
-            </div>}
-            {hasButton && <div className="absolute bottom-5 w-full text-center flex justify-center">
+        <div className={"select-none h-[30px] w-[30px] " + className || ""}>
+             <object data={bubble} className="h-[30px] w-[30px]"/>
+            {/*{!!text && <div*/}
+            {/*    className="text-xl text-white absolute w-[50%] top-1/2 right-1/2 translate-x-1/2 translate-y-[-50px] text-center select-none">*/}
+            {/*    {text}*/}
+            {/*</div>}*/}
+            {hasButton && <div className="-translate-y-6 w-full text-center flex justify-center">
                 <Popover
                     content={() => popoverContent}
                     isOpen={isPopoverOpen}
