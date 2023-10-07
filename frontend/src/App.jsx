@@ -3,7 +3,7 @@ import Index from "./views/Index.jsx";
 
 export default function App() {
     return (
-        <main className="w-screen">
+        <main className="">
             <Navbar/>
             <Index/>
         </main>
