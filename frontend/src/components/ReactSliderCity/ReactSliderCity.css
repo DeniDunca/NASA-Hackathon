@@ -1,0 +1,4 @@
+div [data-testid = 'container'] {
+    background-color: blue;
+    max-height: inherit;
+}
