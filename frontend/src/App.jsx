@@ -15,7 +15,6 @@ export default function App() {
             <Navbar/>
             <Index/>
             <Modal title="ana are mere"><div>asd</div></Modal>
-            <CaraouselCity images={images} texts={texts} width={'500px'}/>
         </main> 
         
     )
