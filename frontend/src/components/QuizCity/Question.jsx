@@ -43,7 +43,7 @@ const Question = (props) => {
             </div>
             <br></br>
             <div className='text-white'>
-                {Object.entries(answers).map(([key, value]) => (<div style={{ borderRadius: '8px', padding: '4px' ,marginBottom: '20px' }} key={key} className={getClassForAnswer(key) + ' w-fit'} onClick={() => clickedAnswer(key)}>{ value }</div>))}
+                {Object.entries(answers).map(([key, value]) => (<div style={{ borderRadius: '8px', padding: '4px' ,marginBottom: '20px' }} key={key} className={getClassForAnswer(key) + ' w-fit cursor-pointer'} onClick={() => clickedAnswer(key)}>{ value }</div>))}
             </div>
         </div>
     );
