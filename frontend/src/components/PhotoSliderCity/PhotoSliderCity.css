@@ -1,7 +1,7 @@
 .photoSlider {
     margin: 5px 10px 5px 10px;
     width: 650px;
-    height: 650px;
+    max-height: 650px;
 }
 
 .photoSliderDivDiv {

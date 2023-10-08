@@ -17,7 +17,7 @@ export default function Index({hasButton = false, buttonAction, className, text,
     }
 
     const popoverContent = hasButton &&
-        <div className='max-w-[80vw] text-xl bg-gray-800 opacity-90 rounded px-10 py-5 text-white flex gap-2'>
+        <div className='max-w-[80vw] text-xl bg-gray-800 opacity-90 rounded px-10 py-5 text-white flex gap-2 z-[99!important]'>
             {popoverProps?.imgUrl && <img className="max-w-[40%]" src={popoverProps.imgUrl}/>}
             <div>
                 <h2 className="font-bold text-2xl">{popoverProps?.title}

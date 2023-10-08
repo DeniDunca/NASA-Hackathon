@@ -16,7 +16,7 @@ export default function Index({hasButton = false, buttonAction, className, text,
     }
 
     const popoverContent = hasButton &&
-        <div className='max-w-[80vw] text-xl bg-gray-800 opacity-90 rounded px-10 py-5 text-white flex gap-2'>
+        <div className='max-w-[50vw] text-xl bg-black opacity-100 rounded px-10 py-5 text-white flex gap-2 z-[30]'>
             {popoverProps?.imgUrl && <img className="max-w-[40%]" src={popoverProps.imgUrl}/>}
             <div>
                 <h2 className="font-bold text-2xl">{popoverProps?.title}
@@ -30,7 +30,7 @@ export default function Index({hasButton = false, buttonAction, className, text,
         <div className={"w-full relative select-none" + className || ""}>
             <img src={drop} className="h-full w-full"/>
             {!!text && <div
-                className="text-xl text-white absolute w-[50%] top-1/2 right-1/2 translate-x-1/2 translate-y-[-50px] text-center select-none">
+                className="text-xl text-white absolute font-bold w-[50%] top-1/2 right-1/2 translate-x-1/2 translate-y-[-50px] text-center select-none">
                 {text}
             </div>}
             {hasButton && <div className="absolute bottom-5 w-full text-center flex justify-center">
