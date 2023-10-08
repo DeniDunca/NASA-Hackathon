@@ -20,3 +20,15 @@
     width: 100vw;
     margin-bottom: 50px;
 }
+
+svg {
+    z-index: 10;
+}
+
+svg * {
+    z-index: 10;
+}
+
+.ReactModal__Overlay{
+    z-index: 999;
+}

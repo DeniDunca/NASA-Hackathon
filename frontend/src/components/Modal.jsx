@@ -4,18 +4,18 @@ import {FaRegCircleXmark} from "react-icons/fa6";
 // Modal.setAppElement('#root');
 
 export default function md({isOpen = false, onClose, title = "", children}) {
-    const [modalIsOpen, setIsOpen] = useState(isOpen);
 
     function closeModal() {
         if (onClose && typeof onClose === "function") onClose();
-        setIsOpen(false);
+        // setIsOpen(false);
     }
 
     return (
         <Modal
-            isOpen={modalIsOpen}
+            isOpen={isOpen}
             onRequestClose={closeModal}
-            contentLabel="Example Modal"
+            contentLabel=""
+            style={{content:{zIndex: 999}}}
         >
             <div className="flex justify-between items-center">
                 <span className="text-2xl font-bold">{title}</span>
