@@ -105,20 +105,23 @@ const QuizCity = () => {
     }
 
     return(
-        <div>
+        <div className='flex justify-center items-center h-screen w-screen p-7'>
+            <div className='bg-blue-900 rounded-2xl w-[70%] p-12'>
             {currentQuestion < questionList.length && 
-            <div>
+            <div className='text-2xl text-white'>
                 Question: {currentQuestion+1}/{questionList.length}
             </div>}
 
             {currentQuestion < questionList.length?
             <Question question={questionList[currentQuestion]} updateQuestion = {updateQuestion}/>
-            : <div> 
+            : <div className='text-white'> 
                 You answered correctly {correctlyAnswered} out of {questionList.length} questions.
                 {(4/5 * questionList.length) <= correctlyAnswered && <div> Congratulations!!! </div>}
             </div>}
 
         </div>
+        </div>
+        
     );
 }
 

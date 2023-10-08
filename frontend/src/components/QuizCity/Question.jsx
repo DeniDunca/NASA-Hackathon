@@ -23,26 +23,27 @@ const Question = (props) => {
             return '';
 
         if ((correct === answer) && (answer === selectedAnswer)) {
-            return 'bg-green-500';
+            return 'bg-green-800';
         } 
 
         if (answer === selectedAnswer) {
-            return 'bg-red-500'
+            return 'bg-red-600'
         }
 
         if (answer === correct) {
-            return 'bg-green-500';
+            return 'bg-green-800';
         }
     }
 
 
     return (
         <div>
-            <div>
+            <div className='text-white p-4 text-xl'>
                 <p>{question}</p>
             </div>
-            <div>
-                {Object.entries(answers).map(([key, value]) => (<div key={key} className={getClassForAnswer(key)} onClick={() => clickedAnswer(key)}>{ value }</div>))}
+            <br></br>
+            <div className='text-white'>
+                {Object.entries(answers).map(([key, value]) => (<div style={{ borderRadius: '8px', padding: '4px' ,marginBottom: '20px' }} key={key} className={getClassForAnswer(key) + ' w-fit'} onClick={() => clickedAnswer(key)}>{ value }</div>))}
             </div>
         </div>
     );
