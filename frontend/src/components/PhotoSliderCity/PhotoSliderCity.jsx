@@ -20,6 +20,7 @@ const PhotoSliderCity = (props) => {
     return(
         <div className="photoSlider">
             <img src={props.photoArray[urlIndex]} loading="eager"></img>
+            {props.footerPhoto? <img src={props.footerPhoto}></img> : ''}
             <div className="photoSliderDivDiv">
                 <div>
                     {props.startYear}
