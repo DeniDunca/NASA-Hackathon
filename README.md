@@ -1,6 +1,6 @@
 # around-the-world
 
-npm i
+npm install
 
 npm run dev
 
